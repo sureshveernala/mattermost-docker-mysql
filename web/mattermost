@@ -19,6 +19,8 @@ server {
         proxy_buffer_size 16k;
         proxy_read_timeout 600s;
         proxy_pass http://{%APP_HOST%}:{%APP_PORT%};
+        access_log off;
+        error_log /dev/null;
     }
 
     location / {
@@ -35,5 +37,7 @@ server {
         proxy_buffer_size 16k;
         proxy_read_timeout 600s;
         proxy_pass http://{%APP_HOST%}:{%APP_PORT%};
+        access_log off;
+        error_log /dev/null;
     }
 }
